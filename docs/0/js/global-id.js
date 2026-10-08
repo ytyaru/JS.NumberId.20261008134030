@@ -16,9 +16,12 @@ class GlobalId {
     }
 
     #validBit(bit) {
-        if (!Number.isSafeInteger(bit) || bit <= 0 || bit % 8 !== 0) {
-            throw new TypeError('bitは8の倍数の正の整数（例: 128, 256, 512）であるべきです。');
+        if (!Number.isSafeInteger(bit) || bit <= 0) {
+            throw new TypeError('bitは1以上の整数であるべきです。');
         }
+//        if (!Number.isSafeInteger(bit) || bit <= 0 || bit % 8 !== 0) {
+//            throw new TypeError('bitは8の倍数の正の整数（例: 128, 256, 512）であるべきです。');
+//        }
     }
 
     #generateRandom(bit) {
