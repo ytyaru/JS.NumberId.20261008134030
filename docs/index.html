@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head prefix="og: https://ogp.me/ns#">
+<meta charset="utf-8">
+<title>2〜64の基数を相互変換する。</title>
+<meta name="description" content="2〜64の基数を相互変換する。">
+<meta name="author" content="ytyaru">
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja">
+<link rel="icon" href="asset/image/author/ytyaru.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2〜64の基数を相互変換する。">
+<meta property="og:description" content="2〜64の基数を相互変換する。">
+<meta property="og:url" content="https://ytyaru.github.io/JS.NumberId.20261008134030/index.html">
+<meta property="og:site_name" content="GitHub Pages">
+<!--<meta property="og:image" content="https://github.com/ytyaru/JS.NumberId.20261008134030/blob/master/docs/asset/image/eye-catch.png?raw=true">-->
+<link rel="stylesheet" href="css/sanitize/v13.0.0/sanitize.css">
+<link rel="stylesheet" href="css/sanitize/v13.0.0/typography.css">
+<link rel="stylesheet" href="css/sanitize/v13.0.0/forms.css">
+<link rel="stylesheet" href="css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+</style>
+<script type="text/javascript" src="lib/van/1.5.3/nomodule/min.js"></script>
+<script src="js/footer.js"></script>
+<script>
+const {h1,p,br,ol,li,footer,small,time,a,img} = van.tags
+window.addEventListener('DOMContentLoaded', async(event) => {
+    // 最新版ほどitemsの先頭に配置する。旧版ほど末尾。
+    const items = [
+        '最初',
+    ]
+    const { h1, p, ol, li, a, code } = van.tags
+    const author = 'ytyaru'
+    const ccBySaUrls = ['cc','cc-by','cc-sa'].map(id=>`asset/image/license/${id}.svg`)
+    van.add(document.body, 
+        h1(a({href:`https://github.com/${author}/JS.NumberId.20261008134030/`}, 'NumberId')),
+        p('2〜64の基数を相互変換する。'),
+//        p('Interconvert between bases 2 to 64.'),
+        makeMenu(),
+        new Footer().make(),
+    )
+    function makeMenu() { return ol({start:items.length-1, reversed:true},
+        //ol({start:0},
+            //items.map((item, i)=>li(a({href:()=>`${i}/index.html`}, item)))
+            items.map((item, i)=>li(a({href:()=>`${items.length-(i+1)}/index.html`}, item)))
+            //items.reverse().map((item, i)=>li(a({href:()=>`${i}/index.html`}, item)))
+            //items.reverse().map((item, i)=>li(a({href:()=>`${items.length-(i+1)}/index.html`}, item)))
+        )
+    }
+})
+</script>
+</head>
+<body>
+</body>
